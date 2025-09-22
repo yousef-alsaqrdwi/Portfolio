@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف يوسف طاهر السقرداوي التعريفي</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles and animations */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        #main-header {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Animation for sections appearing on scroll */
+        .reveal {
+            position: relative;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #10B981, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Highlighted text style in bio */
+        .highlight {
+            font-weight: 700;
+            color: #3B82F6; /* blue-500 */
+        }
+        
+        /* Timeline styling for experience section */
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+            padding-right: 3.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: 1.25rem;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #e5e7eb; /* gray-200 */
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            right: 0.75rem; /* Adjust to center on the line */
+            top: 0.25rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 9999px;
+            background-color: #3B82F6; /* blue-500 */
+            border: 3px solid #ffffff;
+        }
+
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">
+                يوسف السقرداوي
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition duration-300">عني</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-500 transition duration-300">الخبرات</a>
+                <a href="#achievements" class="text-gray-600 hover:text-blue-500 transition duration-300">الإنجازات</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-500 transition duration-300">المهارات</a>
+                <a href="#contributions" class="text-gray-600 hover:text-blue-500 transition duration-300">المساهمات</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition duration-300">تواصل</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-4 space-y-2 flex flex-col items-center">
+                <a href="#about" class="block text-gray-600 hover:text-blue-500 transition duration-300 py-2">عني</a>
+                <a href="#experience" class="block text-gray-600 hover:text-blue-500 transition duration-300 py-2">الخبرات</a>
+                <a href="#achievements" class="block text-gray-600 hover:text-blue-500 transition duration-300 py-2">الإنجازات</a>
+                <a href="#skills" class="block text-gray-600 hover:text-blue-500 transition duration-300 py-2">المهارات</a>
+                <a href="#contributions" class="block text-gray-600 hover:text-blue-500 transition duration-300 py-2">المساهمات</a>
+                <a href="#contact" class="block text-gray-600 hover:text-blue-500 transition duration-300 py-2">تواصل</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col items-center text-center">
+                <div class="reveal w-full">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+                        يوسف طاهر موسى السقرداوي
+                    </h1>
+                    <h2 class="mt-4 text-2xl md:text-3xl font-bold gradient-text">
+                        مدير مشاريع وميسّر تفكير فلسفي (P4C)
+                    </h2>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600">
+                        أجمع بين الخبرة الإدارية في قيادة المشاريع الكبرى ومنهجيات التفكير الفلسفي لتنمية الفكر وتصميم مساحات حوارية هادفة.
+                    </p>
+                    <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                        <a href="#contact" class="px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                            تواصل معي
+                        </a>
+                        <a href="#experience" class="px-8 py-3 bg-gray-200 text-gray-800 font-bold rounded-lg shadow-lg hover:bg-gray-300 transition duration-300 transform hover:scale-105">
+                            استعراض الخبرات
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                    <div class="lg:col-span-1 reveal">
+                        <div class="p-2 bg-gradient-to-br from-blue-400 to-emerald-400 rounded-full shadow-2xl w-64 h-64 mx-auto">
+                           <img src="img/personal_photo.jpg" alt="صورة يوسف السقرداوي" class="rounded-full w-full h-full object-cover border-4 border-gray-50">
+                        </div>
+                        <div class="mt-8 space-y-4 text-center">
+                             <div class="flex items-center justify-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-blue-500" viewBox="0 0 16 16">
+                                    <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0l7.5-3a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 5.482 1.5 8 8 10.518 14.5 8 8 5.482Z"/>
+                                    <path d="M4 11.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V9.415a.5.5 0 0 0-.372-.489l-7.5-3a.5.5 0 0 0-.656.489v6.1Z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">بكالوريوس علم النفس</h4>
+                                    <p class="text-sm text-gray-500">الجامعة المفتوحة للدراسات الإسلامية</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-emerald-500" viewBox="0 0 16 16">
+                                    <path d="M10.561 8.073a6.002 6.002 0 0 0-5.225 5.252A12.235 12.235 0 0 1 8 13.5c1.192 0 2.334.223 3.404.635.328.118.66.273.978.463A6.002 6.002 0 0 0 10.56 8.073Z"/>
+                                    <path d="M6.035 4.134a3.5 3.5 0 1 1 5.481 3.562A12.235 12.235 0 0 1 8 13.5c-1.192 0-2.334-.223-3.404-.635a13.551 13.551 0 0 1-1.008-.45A3.5 3.5 0 0 1 6.035 4.134Z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">ميسّر معتمد في P4C</h4>
+                                    <p class="text-sm text-gray-500">المستوى المتقدم - معهد بصيرة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 reveal">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">خبير إدارة مشاريع وميسّر حوارات هادفة</h2>
+                        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                            أنا <span class="highlight">مدير مشاريع</span> ذو خبرة في قيادة الفرق وتحقيق نتائج ملموسة، وسجل حافل في <span class="highlight">خفض التكاليف التشغيلية</span> واستقطاب مشاريع كبرى. أجمع بشكل فريد بين الخبرة الإدارية ومنهجيات <span class="highlight">التفكير الفلسفي (P4C)</span> لتنمية الفكر وتصميم مساحات حوارية بناءة.
+                        </p>
+                        <div class="mt-8 grid grid-cols-2 gap-8">
+                            <div class="text-center bg-white p-4 rounded-lg shadow-md">
+                                <div class="text-4xl font-extrabold gradient-text counter" data-target="5" data-suffix="+">0+</div>
+                                <div class="mt-2 text-gray-500 font-semibold">سنوات من الخبرة</div>
+                            </div>
+                            <div class="text-center bg-white p-4 rounded-lg shadow-md">
+                                <div class="text-4xl font-extrabold gradient-text counter" data-target="5" data-suffix="+">0+</div>
+                                <div class="mt-2 text-gray-500 font-semibold">مشاريع كبرى</div>
+                            </div>
+                        </div>
+                         <div class="mt-8 flex items-center gap-6">
+                            <a href="#contact" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                                تواصل معي
+                            </a>
+                            <a href="#" class="font-semibold text-gray-700 hover:text-blue-600 transition duration-300">
+                                تحميل السيرة الذاتية &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text reveal">الخبرات المهنية</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-sm text-gray-500">يناير 2024 - الوقت الحالي</p>
+                        <h3 class="text-xl font-bold mt-1">مدير المشروع</h3>
+                        <h4 class="text-md font-semibold text-blue-600">مؤسسة مشكاة العمران للمقاولات</h4>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>أشرفت على فريق عمل من 36 شخصًا، مع ضمان مطابقة جميع مراحل التنفيذ للمعايير والجودة.</li>
+                            <li>طورت قنوات التواصل الفعال مع الشركاء، مما أدى لزيادة كفاءة التواصل بأكثر من 40%.</li>
+                            <li>أنشأت أول نظام تقني متكامل لشركة مقاولات خلال فترة زمنية قياسية لا تتجاوز 4 أشهر.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-sm text-gray-500">يناير 2023 - يناير 2024</p>
+                        <h3 class="text-xl font-bold mt-1">مدير مشروع وممثل فني</h3>
+                        <h4 class="text-md font-semibold text-blue-600">شركة لمياء الخير للمقاولات</h4>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>نجحت في استقطاب مشاريع استراتيجية كبرى بقيمة عشرات الملايين.</li>
+                            <li>طبقت برامج لتحسين الأداء ساهمت بخفض التكاليف التشغيلية بنسبة 25%.</li>
+                            <li>إعادة هيكلة منظومة النقل الداخلي، ما أدى إلى توفير مباشر يفوق 51,200 ريال شهرياً.</li>
+                        </ul>
+                    </div>
+                     <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-sm text-gray-500">يناير 2020 - يناير 2023</p>
+                        <h3 class="text-xl font-bold mt-1">ممثل فني</h3>
+                        <h4 class="text-md font-semibold text-blue-600">شركة أسطول طيبة للمقاولات</h4>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>أدرت أزمة تشغيلية بنجاح، محولاً خسارة 1.2 مليون ريال إلى إيراد صافٍ قدره 780 ألفًا.</li>
+                             <li>توليت الإشراف الفني على المشاريع لضمان التنفيذ حسب المخططات والمواصفات المعتمدة.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-sm text-gray-500">يناير 2020 - مارس 2020</p>
+                        <h3 class="text-xl font-bold mt-1">متدرب ممثل فني</h3>
+                        <h4 class="text-md font-semibold text-blue-600">شركة الكهرباء السعودية</h4>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>توليت مسؤولية التنسيق الفعال بين الفرق الميدانية والإدارية لضمان انسيابية العمل.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text reveal">أبرز الإنجازات</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+                    <div class="reveal bg-white p-6 rounded-xl shadow-lg transform hover:scale-110 transition duration-300">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-blue-600 counter" data-target="70">0</p>
+                        <p class="mt-2 text-gray-600 font-medium">إجمالي الأفراد تحت الإشراف</p>
+                    </div>
+                    <div class="reveal bg-white p-6 rounded-xl shadow-lg transform hover:scale-110 transition duration-300">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-blue-600"><span class="counter" data-target="40">0</span>%</p>
+                        <p class="mt-2 text-gray-600 font-medium">زيادة كفاءة التواصل</p>
+                    </div>
+                    <div class="reveal bg-white p-6 rounded-xl shadow-lg transform hover:scale-110 transition duration-300">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-blue-600"><span class="counter" data-target="25">0</span>%</p>
+                        <p class="mt-2 text-gray-600 font-medium">خفض المصاريف التشغيلية</p>
+                    </div>
+                    <div class="reveal bg-white p-6 rounded-xl shadow-lg transform hover:scale-110 transition duration-300">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-blue-600 counter" data-target="240">0</p>
+                        <p class="mt-2 text-gray-600 font-medium">مشارك في الورش الحوارية</p>
+                    </div>
+                    <div class="reveal bg-white p-6 rounded-xl shadow-lg transform hover:scale-110 transition duration-300 col-span-2 md:col-span-1 lg:col-span-1">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-blue-600 counter" data-target="5">0</p>
+                        <p class="mt-2 text-gray-600 font-medium">مشاريع كبرى تم الإشراف عليها</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text reveal">المهارات</h2>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="reveal bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">المهارات التقنية</h3>
+                        <div class="flex flex-wrap gap-2">
+                           <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Microsoft Office</span>
+                           <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">SAP</span>
+                           <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Power BI</span>
+                           <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Mainframe</span>
+                        </div>
+                    </div>
+                     <div class="reveal bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-emerald-600">المهارات المهنية</h3>
+                        <div class="flex flex-wrap gap-2">
+                           <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">إدارة المشاريع (PMP)</span>
+                           <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">القيادة وإدارة الفرق</span>
+                           <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">التخطيط الاستراتيجي</span>
+                           <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">خفض التكاليف التشغيلية</span>
+                           <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">التيسير الفلسفي (P4C)</span>
+                        </div>
+                    </div>
+                     <div class="reveal bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-purple-600">المهارات الناعمة</h3>
+                        <div class="flex flex-wrap gap-2">
+                           <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">حل المشكلات والتفكير النقدي</span>
+                           <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">التفاوض وبناء العلاقات</span>
+                           <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">المبادرة والابتكار</span>
+                           <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">التواصل الفعال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contributions" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text reveal">المساهمات المجتمعية وورش العمل</h2>
+                 <p class="text-center text-gray-600 mb-12 -mt-8 max-w-2xl mx-auto reveal">اضغط على بطاقة الورشة لعرض المزيد من التفاصيل والصور.</p>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div data-modal-target="modal-1" class="reveal bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-blue-600">ورش فلسفية وأدبية</h3>
+                            <p class="text-gray-500 text-sm mb-3">مكتبة افانجارديا | ديسمبر ٢٠٢٤</p>
+                            <p class="text-gray-700">قدمت مجموعة من الورش لـ ٣٤ طفلًا و ٤١ بالغًا، باستخدام منهجية P4C حول مفاهيم العطاء، الحقيقة، والغضب.</p>
+                        </div>
+                    </div>
+                    <div data-modal-target="modal-2" class="reveal bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-blue-600">منجم القصص القرآني</h3>
+                            <p class="text-gray-500 text-sm mb-3">مكتبة افانجارديا | مارس ۲۰۲۵</p>
+                            <p class="text-gray-700">سلسلة ورش عمل لـ ۷۰ طفلًا، مستلهمة من القصص القرآني بمنهجية P4C لمناقشة مفاهيم المسؤولية، العدل، والشجاعة.</p>
+                        </div>
+                    </div>
+                     <div data-modal-target="modal-3" class="reveal bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-blue-600">ورش بالتعاون مع المدارس</h3>
+                            <p class="text-gray-500 text-sm mb-3">مدارس المتقدمة الأهلية | أبريل ۲۰۲٥</p>
+                            <p class="text-gray-700">قدمت ورش عمل لـ ٥٤ طفلًا حول مشاعر معقدة وقيم فلسفية مثل الحقيقة والغضب كجزء طبيعي من المشاعر.</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold reveal">للتواصل</h2>
+            <p class="mt-4 max-w-lg mx-auto reveal">مهتم بالتعاون في مشروع جديد أو لديك استفسار؟ لا تتردد في التواصل.</p>
+
+            <div class="mt-8 flex justify-center items-center flex-wrap gap-6 reveal">
+                <a href="mailto:yousef.t.mousa@gmail.com" class="flex items-center gap-3 text-lg bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors duration-300 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                    </svg>
+                    <span>yousef.t.mousa@gmail.com</span>
+                </a>
+                <a href="tel:+966563316290" class="flex items-center gap-3 text-lg bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors duration-300 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"></path>
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                    </svg>
+                    <span dir="ltr">+966 56 331 6290</span>
+                </a>
+            </div>
+            <div class="mt-6 flex justify-center">
+                <div class="flex items-center gap-3 text-lg bg-gray-700 px-6 py-3 rounded-lg shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"></path>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                    </svg>
+                    <span>المدينة المنورة، السعودية</span>
+                </div>
+            </div>
+
+             <div class="mt-12 border-t border-gray-700 pt-6">
+<!--                 <p class="text-gray-400">&copy; 2025 | تم تصميمه لـ يوسف طاهر السقرداوي.</p> -->
+             </div>
+        </div>
+    </footer>
+
+    <div id="modal-1" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scale-95">
+            <div class="flex justify-between items-center p-4 border-b sticky top-0 bg-white">
+                <h3 class="text-xl font-bold text-blue-600">ورش فلسفية وأدبية</h3>
+                <button data-modal-close="modal-1" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 text-sm mb-4"><strong>المكان:</strong> مكتبة افانجارديا | <strong>التاريخ:</strong> ديسمبر ٢٠٢٤</p>
+                <p class="text-gray-700 mb-6">
+                    ورش عمل تفاعلية مصممة للأطفال والبالغين باستخدام منهجية (P4C) لاستكشاف مفاهيم فلسفية عميقة من خلال الحوار والنقاش. تم التركيز على موضوعات مثل:
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-2 mb-6 text-gray-700">
+                    <li><b>مفهوم العطاء للأطفال:</b> حوار فلسفي حول دوافع العطاء وحدوده.</li>
+                    <li><b>مفهوم الحقيقة للأطفال:</b> نقاش حول طبيعة الحقيقة وتداخلها مع الرأي.</li>
+                    <li><b>ورشة "كذبة بيضاء" للكبار:</b> استكشاف الإشكال الأخلاقي للكذب وحدود الصدق.</li>
+                    <li><b>جلسة "الفلسفة في متاهات الأدب":</b> مناقشة تفاعلية لأثر الفلسفة في السرد الأدبي.</li>
+                </ul>
+                <div>
+                    <img id="main-image-1" src="https://placehold.co/800x500/3B82F6/FFFFFF?text=ورشة+العطاء" alt="صورة الورشة الرئيسية" class="w-full h-auto rounded-lg mb-4 shadow-md">
+                    <div class="grid grid-cols-4 gap-2 gallery-thumbnails" data-gallery="1">
+                        <img src="https://placehold.co/200x125/3B82F6/FFFFFF?text=ورشة+العطاء" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-blue-500 hover:opacity-80 transition-opacity">
+                        <img src="https://placehold.co/200x125/10B981/FFFFFF?text=نقاش+الأطفال" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                        <img src="https://placehold.co/200x125/8B5CF6/FFFFFF?text=جلسة+حوارية" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                        <img src="https://placehold.co/200x125/F59E0B/FFFFFF?text=مكتبة+افانجارديا" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scale-95">
+            <div class="flex justify-between items-center p-4 border-b sticky top-0 bg-white">
+                <h3 class="text-xl font-bold text-blue-600">منجم القصص القرآني</h3>
+                <button data-modal-close="modal-2" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 text-sm mb-4"><strong>المكان:</strong> مكتبة افانجارديا | <strong>التاريخ:</strong> مارس ۲۰۲۵</p>
+                <p class="text-gray-700 mb-6">
+                    سلسلة ورش عمل موجهة لـ ٧٠ طفلاً، تستلهم من القصص القرآني بمنهجية P4C لإثارة التساؤلات الفلسفية العميقة حول قيم إنسانية أساسية.
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-2 mb-6 text-gray-700">
+                    <li><b>الحقيقة والمسؤولية:</b> مستوحاة من قصة النبي موسى والخضر.</li>
+                    <li><b>الأنانية والظلم:</b> مستوحاة من قصة أصحاب الجنة.</li>
+                    <li><b>المواجهة والشجاعة:</b> من قصة طالوت وجالوت.</li>
+                    <li><b>النصر والسكينة:</b> تأملات حول مفهوم النصر من غزوة بدر.</li>
+                </ul>
+                <div>
+                    <img id="main-image-2" src="https://placehold.co/800x500/059669/FFFFFF?text=القصص+القرآني" alt="صورة الورشة الرئيسية" class="w-full h-auto rounded-lg mb-4 shadow-md">
+                    <div class="grid grid-cols-4 gap-2 gallery-thumbnails" data-gallery="2">
+                        <img src="https://placehold.co/200x125/059669/FFFFFF?text=القصص+القرآني" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-blue-500 hover:opacity-80 transition-opacity">
+                        <img src="https://placehold.co/200x125/D97706/FFFFFF?text=تفاعل+الأطفال" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                        <img src="https://placehold.co/200x125/4F46E5/FFFFFF?text=حلقة+نقاش" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                        <img src="https://placehold.co/200x125/DC2626/FFFFFF?text=أدوات+الورشة" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scale-95">
+            <div class="flex justify-between items-center p-4 border-b sticky top-0 bg-white">
+                <h3 class="text-xl font-bold text-blue-600">ورش بالتعاون مع المدارس</h3>
+                <button data-modal-close="modal-3" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 text-sm mb-4"><strong>المكان:</strong> مدارس المتقدمة الأهلية | <strong>التاريخ:</strong> أبريل ۲۰۲٥</p>
+                <p class="text-gray-700 mb-6">
+                    تم تقديم ورش عمل متخصصة لـ ٥٤ طفلاً لاستكشاف المشاعر المعقدة والقيم الفلسفية بأسلوب حواري وتفاعلي، بهدف تعزيز الذكاء العاطفي والتفكير النقدي لديهم.
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-2 mb-6 text-gray-700">
+                    <li><b>ورشة الحقيقة:</b> مناقشة تفاعلية حول متى تكون الحقيقة مؤلمة وهل يجب قولها دائمًا.</li>
+                    <li><b>ورشة الغضب:</b> نقاش فلسفي حول فهم الغضب كجزء طبيعي من المشاعر الإنسانية وليس كعيب يجب إخفاؤه.</li>
+                </ul>
+                <div>
+                    <img id="main-image-3" src="https://placehold.co/800x500/7C3AED/FFFFFF?text=ورشة+مدرسية" alt="صورة الورشة الرئيسية" class="w-full h-auto rounded-lg mb-4 shadow-md">
+                    <div class="grid grid-cols-4 gap-2 gallery-thumbnails" data-gallery="3">
+                        <img src="https://placehold.co/200x125/7C3AED/FFFFFF?text=ورشة+مدرسية" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-blue-500 hover:opacity-80 transition-opacity">
+                        <img src="https://placehold.co/200x125/DB2777/FFFFFF?text=طلاب+مشاركون" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                        <img src="https://placehold.co/200x125/1D4ED8/FFFFFF?text=بيئة+صفية" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                        <img src="https://placehold.co/200x125/F59E0B/FFFFFF?text=تفكير+إبداعي" alt="صورة مصغرة" class="cursor-pointer rounded border-2 border-transparent hover:border-blue-500 hover:opacity-80 transition-all">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript for animations on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+
+        // JavaScript for animated counters
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; 
+
+        const animateCounters = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counterElement = entry.target;
+                    const updateCount = () => {
+                        const target = +counterElement.getAttribute('data-target');
+                        const suffix = counterElement.getAttribute('data-suffix') || '';
+                        const count = +counterElement.innerText.replace(suffix, '');
+                        const inc = Math.ceil(target / speed);
+
+                        if (count < target) {
+                            counterElement.innerText = (count + inc) + suffix;
+                            setTimeout(updateCount, 15);
+                        } else {
+                            counterElement.innerText = target + suffix;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counterElement); // Unobserve after animation starts
+                }
+            });
+        };
+        
+        const counterObserver = new IntersectionObserver(animateCounters, {
+            threshold: 0.8
+        });
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ---- HIDE HEADER ON SCROLL LOGIC ----
+            const header = document.getElementById('main-header');
+            if (header) {
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', function() {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                        header.classList.add('header-hidden');
+                    } else {
+                        header.classList.remove('header-hidden');
+                    }
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                });
+            }
+
+            // ---- HAMBURGER MENU LOGIC ----
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                // Hide menu when a link is clicked
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // ---- MODAL LOGIC ----
+            const openModalButtons = document.querySelectorAll('[data-modal-target]');
+            const closeModalButtons = document.querySelectorAll('[data-modal-close]');
+
+            const openModal = (modal) => {
+                if (!modal) return;
+                const modalContent = modal.querySelector('.transform');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    if (modalContent) modalContent.classList.remove('scale-95');
+                }, 10);
+            };
+
+            const closeModal = (modal) => {
+                if (!modal) return;
+                const modalContent = modal.querySelector('.transform');
+                modal.classList.add('opacity-0');
+                if (modalContent) modalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300);
+            };
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = document.getElementById(button.dataset.modalTarget);
+                    openModal(modal);
+                });
+            });
+
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = document.getElementById(button.dataset.modalClose);
+                    closeModal(modal);
+                });
+            });
+            
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            });
+
+            // ---- GALLERY LOGIC ----
+            const galleries = document.querySelectorAll('.gallery-thumbnails');
+            galleries.forEach(gallery => {
+                const galleryId = gallery.dataset.gallery;
+                const mainImage = document.getElementById(`main-image-${galleryId}`);
+                const thumbnails = gallery.querySelectorAll('img');
+
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener('click', () => {
+                        const newSrc = thumbnail.src.replace('200x125', '800x500');
+                        mainImage.src = newSrc;
+                        
+                        thumbnails.forEach(t => {
+                            t.classList.remove('border-blue-500');
+                            t.classList.add('border-transparent');
+                        });
+                        thumbnail.classList.remove('border-transparent');
+                        thumbnail.classList.add('border-blue-500');
+                    });
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
